@@ -24,4 +24,14 @@ message.author.send(`**مدة الرابط : يـوم
 
 });
 
+client.on('ready',async () => {
+  sendReady('491517470138433536', `**__ تـم تـشـغـيـل الـبـوت بـنـجـاح , Link Bot | Owner Bot : SoM # 1100__**`);
+  
+  function sendReady(channel, message) {
+    client.channels.get(channel).send(message);
+    console.log(message);
+  }
+});
+
+
 client.login(process.env.BOT_TOKEN);
